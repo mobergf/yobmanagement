@@ -1,0 +1,32 @@
+.applicant-info {
+  p {
+    display: inline;
+    font-size: 1rem;
+  }
+
+  h4 {
+    margin: 0 0 10px;
+  }
+}
+
+.applicant-button {
+  padding: 10px 20px;
+  margin: 0 20px 10px 0;
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  transition: 0.3s all;
+  font-family: Staatliches;
+  font-size: 20px;
+  border-radius: 3px;
+
+  &:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  }
+
+  &--selected {
+    background-color: #e7e7e7;
+  }
+}

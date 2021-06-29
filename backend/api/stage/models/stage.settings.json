@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stage",
+  "info": {
+    "name": "Stage",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "applicants": {
+      "via": "stage",
+      "collection": "applicant"
+    },
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid"
+    }
+  }
+}

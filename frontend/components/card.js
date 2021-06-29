@@ -1,22 +1,26 @@
 import React from "react";
 import Link from "next/link";
-import Image from "./image";
+import Image from "../components/image";
 
-const Card = ({ article }) => {
+const Card = ({ applicant }) => {
   return (
-    <Link as={`/article/${article.slug}`} href="/article/[id]">
+    <Link as={`/applicants/${applicant.slug}`} href="/applicants/[id]">
       <a className="uk-link-reset">
-        <div className="uk-card uk-card-muted">
-          <div className="uk-card-media-top">
-            <Image image={article.image} />
-          </div>
-          <div className="uk-card-body">
-            <p id="category" className="uk-text-uppercase">
-              {article.category.name}
-            </p>
-            <p id="title" className="uk-text-large">
-              {article.title}
-            </p>
+        <div className="uk-card uk-card-muted  article-card uk-animation-fade">
+          <div className="uk-card-body uk-flex uk-flex-middle uk-flex-between">
+            <h3 id="category" className="uk-text-uppercase">
+              {applicant.name}
+            </h3>
+            <Image
+              image={applicant.image}
+              style={{
+                position: "static",
+                borderRadius: "50%",
+                height: 120,
+                width: 120,
+                objectFit: "cover",
+              }}
+            />
           </div>
         </div>
       </a>

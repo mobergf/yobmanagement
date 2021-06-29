@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "articles",
   "info": {
-    "name": "article",
+    "name": "articles",
     "description": ""
   },
   "options": {
@@ -45,9 +45,28 @@
       "required": true,
       "pluginOptions": {}
     },
-    "author": {
-      "via": "articles",
-      "model": "writer"
+    "applicationdate": {
+      "type": "date",
+      "required": true
+    },
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "applicationUrl": {
+      "type": "string",
+      "required": true
+    },
+    "time": {
+      "type": "enumeration",
+      "enum": [
+        "heltid",
+        "halvtid",
+        "deltid25",
+        "deltid50",
+        "deltid75"
+      ],
+      "required": true
     }
   }
 }

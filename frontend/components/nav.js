@@ -4,29 +4,25 @@ import Link from "next/link";
 const Nav = ({ categories }) => {
   return (
     <div>
-      <nav className="uk-navbar-container" data-uk-navbar>
-        <div className="uk-navbar-left">
-          <ul className="uk-navbar-nav">
-            <li>
-              <Link href="/">
-                <a>Strapi Blog</a>
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div className="uk-navbar-right">
-          <ul className="uk-navbar-nav">
-            {categories.map((category) => {
+      <nav className="topnav">
+        <ul className="uk-navbar-nav">
+          <li className="topnav__logo">
+            <Link href="/">
+              <img src="https://www.digitalent.se/_nuxt/img/digitalent-logo.75c8176.svg" />
+            </Link>
+          </li>
+          {categories &&
+            categories.length &&
+            categories.map((category) => {
               return (
-                <li key={category.id}>
-                  <Link as={`/category/${category.slug}`} href="/category/[id]">
-                    <a className="uk-link-reset">{category.name}</a>
+                <li className="topnav__item" key={category.id}>
+                  <Link as={`/stages/${category.slug}`} href="/stages/[id]">
+                    <a className="uk-link-heading">{category.name}</a>
                   </Link>
                 </li>
               );
             })}
-          </ul>
-        </div>
+        </ul>
       </nav>
     </div>
   );
