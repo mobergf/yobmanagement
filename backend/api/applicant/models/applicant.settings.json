@@ -29,7 +29,8 @@
       "model": "stage"
     },
     "slug": {
-      "type": "uid"
+      "type": "uid",
+      "targetField": "name"
     },
     "description": {
       "type": "richtext"

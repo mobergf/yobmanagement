@@ -29,4 +29,24 @@
   &--selected {
     background-color: #e7e7e7;
   }
+
+  &--delete {
+    background-color: rgb(206, 70, 70);
+    color: white;
+    border: none;
+
+    &:hover {
+      background-color: red;
+    }
+  }
+
+  &--submit {
+    background-color: #549654;
+    color: white;
+    border: none;
+
+    &:hover {
+      background-color: rgb(48, 131, 48);
+    }
+  }
 }

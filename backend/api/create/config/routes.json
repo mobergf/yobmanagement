@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/create",
+      "handler": "create.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/create",
+      "handler": "create.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/create",
+      "handler": "create.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

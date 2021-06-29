@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "creates",
+  "info": {
+    "name": "create"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    }
+  }
+}

@@ -1,23 +1,14 @@
-import ReactMarkdown from "react-markdown";
-import Moment from "react-moment";
 import { fetchAPI } from "../../lib/api";
 import Layout from "../../components/layout";
-import Image from "../../components/image";
 import Seo from "../../components/seo";
-import { getStrapiMedia } from "../../lib/media";
 import Applicants from "../../components/applicants";
 
 const Stages = ({ allStages, stages }) => {
-  console.log(allStages);
-  //   const seo = {
-  //     metaTitle: stages.title,
-  //     metaDescription: stages.description,
-  //     shareImage: stages.image,
-  //     stages: true,
-  //   };
   return (
     <Layout categories={allStages}>
+      <Seo />
       <div className="uk-container  uk-margin-medium-top">
+        <h1>{stages.name}</h1>
         <Applicants applicants={stages.applicants} />
       </div>
     </Layout>

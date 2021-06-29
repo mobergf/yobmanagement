@@ -11,16 +11,18 @@ const Card = ({ applicant }) => {
             <h3 id="category" className="uk-text-uppercase">
               {applicant.name}
             </h3>
-            <Image
-              image={applicant.image}
-              style={{
-                position: "static",
-                borderRadius: "50%",
-                height: 120,
-                width: 120,
-                objectFit: "cover",
-              }}
-            />
+            {applicant.image && (
+              <Image
+                image={applicant.image}
+                style={{
+                  position: "static",
+                  borderRadius: "50%",
+                  height: 120,
+                  width: 120,
+                  objectFit: "cover",
+                }}
+              />
+            )}
           </div>
         </div>
       </a>
